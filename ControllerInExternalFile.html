@@ -1,0 +1,27 @@
+<!-- AngularJS applications are controlled by controllers.
+
+The ng-controller directive defines the application controller.
+
+A controller is a JavaScript Object, created by a standard JavaScript object constructor.
+-->
+
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+</head>
+<body>
+	<div ng-app = 'app' ng-controller = 'contr'>
+		First Name:<input type = 'input' ng-model = 'fname'>
+	<br><br>
+		Last Name:<input type = 'input' ng-model = 'lname'>
+	<br><br>
+		Full Name: {{fname + ' ' + lname}}
+
+	</div>
+
+<script src = 'ContrExternal.js'>
+
+</script>
+</body>
+</html>
