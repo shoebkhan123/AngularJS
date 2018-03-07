@@ -1,0 +1,28 @@
+<!-- The scope is the binding part between the HTML (view) and the JavaScript (controller).
+
+The scope is an object with the available properties and methods.
+
+The scope is available for both the view and the controller.
+-->
+
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+</head>
+<body>
+	<div ng-app = 'app' ng-controller = 'contr'>
+		 <h1>{{msg}}</h1>
+
+	</div>
+
+<script >
+
+angular.module('app', []).controller('contr', function($scope)
+{
+	$scope.msg = 'Hello! How are you?';
+	
+});
+</script>
+</body>
+</html>

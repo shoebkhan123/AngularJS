@@ -1,0 +1,32 @@
+<!-- All applications have a $rootScope which is the scope created on the HTML element that contains the ng-app directive.
+
+The rootScope is available in the entire application.
+
+If a variable has the same name in both the current scope and in the rootScope, the application uses the one in the current scope.
+-->
+
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+</head>
+<body ng-app = 'app'>
+	<p>The scope of root Controller</p>
+		<h3>{{frnd}} </h3>
+	<div  ng-controller = 'contr'>
+		<p>The scope of Controller</p>
+		<h3>{{frnd}} </h3>
+	</div>
+
+<script >
+
+var app = angular.module('app', []);
+app.run(function($rootScope) {
+    $rootScope.frnd = 'Anju';
+});
+app.controller('contr', function($scope) {
+    $scope.frnd = "Pria";
+});
+</script>
+</body>
+</html>
