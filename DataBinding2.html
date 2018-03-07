@@ -1,0 +1,24 @@
+<!--Data binding in AngularJS is the synchronization between the model and the view.-->
+
+
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+</head>
+<body>
+	<div ng-app = 'app' ng-controller = 'cont'>
+First Name: <input type = 'text' ng-model = 'fName'>
+	</div>
+
+<script type="text/javascript">
+angular.module('app', []).controller('cont', function  ($scope) {
+$scope.fName = 'shoeb';
+$scope.lName = 'Khan';
+
+
+});
+
+</script>
+</body>
+</html>
