@@ -1,0 +1,24 @@
+<!-- With the ng-model directive you can bind the value of an input field to a variable created in AngularJS.
+-->
+
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+</head>
+<body>
+	<div ng-app = 'app' ng-controller = 'contr'>
+		 Name:<input type = 'input' ng-model = 'name'>
+
+	</div>
+
+<script >
+
+angular.module('app', []).controller('contr', function($scope)
+{
+	$scope.name = 'Pria S.';
+	
+});
+</script>
+</body>
+</html>
