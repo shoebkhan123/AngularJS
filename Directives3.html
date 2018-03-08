@@ -1,0 +1,25 @@
+<!-- The ng-repeat directive repeats an HTML element:
+-->
+
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+</head>
+<body>
+	<div ng-app = 'app', ng-controller = 'contr'> 
+		<ol type = 'I'>
+			<li ng-repeat = 'i in names'>
+				{{i}}
+			</li>
+		</ol>
+
+	</div>
+
+<script>
+	angular.module('app', []).controller('contr', function($scope) {
+			$scope.names = ['Anju', 'vivek', 'pria','shoeb'];
+	});
+</script>
+</body>
+</html>
