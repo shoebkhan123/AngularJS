@@ -1,0 +1,38 @@
+<!-- You can add AngularJS event listeners to your HTML elements by using one or more of these directives:
+ng-blur
+ng-change
+ng-click
+ng-copy
+ng-cut
+ng-dblclick
+ng-focus
+ng-keydown
+ng-keypress
+ng-keyup
+ng-mousedown
+ng-mouseenter
+ng-mouseleave
+ng-mousemove
+ng-mouseover
+ng-mouseup
+ng-paste
+-->
+
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+</head>
+<body>
+	<div ng-app = 'app' ng-controller = 'contr'>
+		<h1 ng-mouseover = 'count = count + 1'>Please Mouse Over Me</h1>
+		<h2>{{count}}</h2>
+	</div>
+
+<script>
+	angular.module('app', []).controller('contr', function($scope) {
+		$scope.count = 0;
+	})
+</script>
+</body>
+</html>
