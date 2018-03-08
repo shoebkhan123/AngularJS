@@ -1,0 +1,29 @@
+<!--In AngularJS, a service is a function, or object, that is available for, and limited to, your AngularJS application.
+
+AngularJS has about 30 built-in services. One of them is the $location service.
+-->
+The $interval service is AngularJS' version of the window.setInterval function.
+
+
+
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+</head>
+<body>
+	<div ng-app = 'app' ng-controller = 'contr'>
+		<p>The time is: </p>
+		<h3>{{timee}}</h3>
+	</div>
+
+<script>
+	angular.module('app', []).controller('contr', function($scope, $interval) {
+		$scope.timee = new Date().toLocaleTimeString();
+		$interval(function() {
+		$scope.timee = new Date().toLocaleTimeString();
+		}, 1000);
+	});
+</script>
+</body>
+</html>
