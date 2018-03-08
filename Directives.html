@@ -1,0 +1,23 @@
+<!-- AngularJS lets you extend HTML with new attributes called Directives.
+
+AngularJS has a set of built-in directives which offers functionality to your applications.
+
+AngularJS also lets you define your own directives.
+-->
+
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+</head>
+<body ng-app = ''>
+	<div ng-init = "length  = 40; height">
+		Length: <input type = 'text' ng-model = 'length'>
+		Height: <input type = 'text' ng-model = 'height'>
+
+		Area of The Room : {{length * height}}
+	</div>
+
+
+</body>
+</html>
