@@ -1,0 +1,30 @@
+<!-- The AngularJS Global API is a set of global JavaScript functions for performing common tasks like:
+
+Comparing objects
+Iterating objects
+Converting data
+The Global API functions are accessed using the angular object.
+-->
+
+
+
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+</head>
+<body>
+	<div ng-app = 'app' ng-controller = 'contr'>
+		<h1>Is Number: {{num}}</h1>
+
+	</div>
+
+<script>
+	angular.module('app', []).controller('contr', function($scope) {
+		$scope.str = 'Shoeb';
+		$scope.num = angular.isNumber($scope.str);
+
+	});
+</script>
+</body>
+</html>
