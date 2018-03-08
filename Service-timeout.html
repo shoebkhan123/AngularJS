@@ -1,0 +1,28 @@
+<!--In AngularJS, a service is a function, or object, that is available for, and limited to, your AngularJS application.
+
+AngularJS has about 30 built-in services. One of them is the $location service.
+-->
+The $timeout service is AngularJS' version of the window.setTimeout function.
+
+
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+</head>
+<body>
+	<div ng-app = 'app' ng-controller = 'contr'>
+		<p>Hii will Change after 3 sec</p>
+		<h3>{{msg}}</h3>
+	</div>
+
+<script>
+	angular.module('app', []).controller('contr', function($scope, $timeout) {
+		$scope.msg = 'Hiii!';
+		$timeout(function() {
+		$scope.msg = 'How are you??';
+		}, 3000);
+	});
+</script>
+</body>
+</html>
