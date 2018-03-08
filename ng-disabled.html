@@ -1,0 +1,24 @@
+<!-- AngularJS has directives for binding application data to the attributes of HTML DOM elements.
+-->
+
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+</head>
+<body>
+	<div ng-app = '' ng-init = 'switch = false'>
+		<button ng-disabled = 'switch'>Click Me</button><br>
+		<input type = 'checkbox' ng-model = 'switch' > Check to disable to Button
+
+		<br>
+		<p>
+			Status: {{switch}}
+		</p>
+	</div>
+
+<script>
+	
+</script>
+</body>
+</html>
