@@ -1,0 +1,24 @@
+<!--In AngularJS, a service is a function, or object, that is available for, and limited to, your AngularJS application.
+
+AngularJS has about 30 built-in services. One of them is the $location service.
+-->
+The $location service has methods which return information about the location of the current web page:
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+</head>
+<body>
+	<div ng-app = 'app' ng-controller = 'contr'>
+		<p>The URL of this page is: </p>
+		<h3>{{pageUrl}}</h3>
+	</div>
+
+<script>
+	angular.module('app', []).controller('contr', function($scope, $location) {
+		$scope.pageUrl = $location.absUrl();
+	
+	});
+</script>
+</body>
+</html>
